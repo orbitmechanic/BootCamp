@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(10, 10, 10);
+    font-family: courier;
+    font-size: 100%;
+    border: 0px;
+    padding: 0px;
+    margin: 5%;
+    text-align: left;
+  }
+  h1 {
+    color:  khaki;
+    align-content:left;
+  }
+  h2 {
+    color: cornsilk;
+    padding-top: 20px;
+    margin: 0%;
+  }
+  h3 {
+    color: blanchedalmond; 
+    right: 20px;
+    padding-top: 15px;
+    padding-right: 10%;
+    margin: 0%;
+  }
+  h4 {
+      color:burlywood;
+      margin: 0%;
+  }
+  p {
+    color: goldenrod;
+    margin: 0px;
+    text-align: justify;
+  }
+
+  td, li {
+      color: darkgoldenrod;
+      font-size: small;
+  }
+
+  table {
+      width:100%;
+  }
+
+  header {
+    background-image: url('TA.jpg');
+    background-size:100% 100%;
+  }

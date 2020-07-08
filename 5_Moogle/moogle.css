@@ -9,12 +9,24 @@ body {
   }
 
 .container {
-    margin-left: 0px;
-    margin-right:0px;
+    margin:0px;
     padding:0px;
+    max-width:none;
 }
 
 .logo {
     margin: 0px;
     padding: 0px;
+}
+
+.nav-item {
+    font-size:12px;
+}
+
+#tabrow {
+    border-bottom: 1px solid;
+}
+
+#bragbar {
+    font-size:14px;
 }

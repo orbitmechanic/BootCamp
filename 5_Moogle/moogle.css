@@ -30,3 +30,31 @@ body {
 #bragbar {
     font-size:14px;
 }
+
+#creator, #locationStamp {
+    margin: 0px;
+    padding: 0px;
+    font-size: 80%;
+}
+
+#cheese {
+    margin:50;
+}
+
+#linkSource{
+    font-size: 80%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+#linkTitle{
+    font-size:130%;
+    color:blue;
+    margin: 0px;
+    padding: 0px;
+}
+
+#linkText{
+    font: size 90%;
+}

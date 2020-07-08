@@ -35,7 +35,7 @@
           <div class="col-5">
               <!-- Search island -->
               <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="You get 3 wishes." aria-label="Whatcha Want?" aria-describedby="button-addon2">
+                <input type="text" class="form-control" placeholder="Bricks" aria-label="Whatcha Want?" aria-describedby="button-addon2">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="mockery/microphone.jpg" alt="SoundNose" title="Shout'n'Search" width="20" height="20"></button>
                 </div>
@@ -93,62 +93,108 @@
                 <!-- Spacer-->
             </div> 
         </div> <!-- Row of tabs -->
+
         <div class="row">
             <div class="col-1"></div> <!-- Spacer-->
             <div class="col-10">
                 <p id="bragbar"> 234,54,17,1235,7234,1234,421,3457,123 is Satoshi's private key.</p>
             </div>  <!-- results kounter-->
         </div> <!-- brag bar row -->
+
         <div class="row">
             <div class="col-1"></div> <!-- Spacer-->
             <div class="col-6">
+
                 <div class="row">
                     <h4>Videos</h4>
                 </div> <!--videos title row-->
+
                 <div class="row">
-                    <div class="col">
-                        <div class="card" style="width: auto;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div> <!-- video card 1-->
-                    <div class="col">
-                        <div class="card" style="width: auto;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div> <!-- video card 2-->
-                    <div class="col">
-                        <div class="card" style="width: auto;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>                        
-                    </div> <!-- video card 3-->
-                </div> <!-- 3 video cards-->
+                    <div class="card-deck">
+                      <div class="card" id="videoCard" style="width: auto;">
+                        <img src="mockery/brick1.jpg" class="card-img-top"  alt="Bricks to watch" height="150" >
+                        <div class="card-body">
+                          <a href="https://www.youtube.com/watch?v=Vl01xf8D5js" >Bricks to watch</a>
+                          <p class="card-text">These bricks are a must-watch for sleepless nights.</p>
+                        </div> <!--card-body-->
+                        <div class="card-footer">
+                          <p class="card-text" id="creator">Brickapalooza</p>
+                          <p class="card-text" id="locationStamp">BrickTube - Mar 11, 44 B.C.</p>
+                        </div> <!--card-footer-->
+                      </div> <!-- card 1-->
+                      <div class="card" id="videoCard" style="width: auto;">
+                        <img src="mockery/brick2.jpg" class="card-img-top" alt="Exciting Brick Footage" height="150" >
+                        <div class="card-body">
+                          <a href="https://www.youtube.com/watch?v=lORIZ1shRIM" >Brick Ethics</a>
+                          <p class="card-text">Is laying bricks workplace harrassment?</p>
+                        </div> <!--card-body-->
+                        <div class="card-footer">
+                          <p class="card-text" id="creator">Bricks United</p>
+                          <p class="card-text" id="locationStamp">BrickSpace - Mar 11, 745 B.C.</p>
+                        </div> <!--card-footer-->
+                      </div> <!-- card 2-->
+                      <div class="card" id="videoCard" style="width: auto;">
+                        <img src="mockery/brick3.jpg" class="card-img-top" alt="Brick Tricks" height="150">
+                        <div class="card-body">
+                          <a href="https://www.youtube.com/watch?v=MMl8j6YBcoU" >Brick Tricks</a>
+                          <p class="card-text">You won't believe your eyes.</p>
+                        </div> <!--card-body-->
+                        <div class="card-footer">
+                          <p class="card-text" id="creator">Brickvasion</p>
+                          <p class="card-text" id="locationStamp">BrickTube - Dec 17, 1944 B.C.</p>
+                        </div> <!--card-footer-->
+                      </div>   <!-- card 3-->
+                    </div> <!-- card-deck-->
+                  </div> <!-- card deck row-->
+
+                  <h1 id="cheese"> </h1><!--cheezy spacer-->
+
+                  <ul class="list-group">
+                    <li class="list-group-item"><b>People Also Ask</b></li>
+                    <li class="list-group-item">How do bricks fit in to society?</li>
+                    <li class="list-group-item">What bricks make good pets?</li>
+                    <li class="list-group-item">What's the hottest brick-related sport?</li>
+                    <li class="list-group-item">Can I take my brick swimming?</li>
+                  </ul>
+
+                  <h1 id="cheese"> </h1><!--cheezy spacer-->
+
+                  <div id="result">
+                    <p class="text-left" id="linkSource">u.mit.edu>brick-care-basics>bricks</p>
+                    <p class="text-left" id="linkTitle">Brick Basics | Pets 4 Life - mit.edy - Michian Institute of Technology</p>
+                    <p class="text-left" id="linkText">Contrary to popular belief, bricks are not rodents.  They have their own unique requirments for care and live an average of 300-700 years. Bricks can be very social and even trainable.  Bricks can be litter box trained, so many brick owners give their bricks free range fo the house or an entire room.</p>
+                  </div> <!--result-->
+
+                  <div id="result">
+                    <p class="text-left" id="linkSource">www.nationalgeographic.com</p>
+                    <p class="text-left" id="linkTitle">218 Best Brick Images | Cute Brick, Cute Building Materials, Brick</p>
+                    <p class="text-left" id="linkText">April 1, 1973 This sweet little brick and her brick doll make quite the cuddlesome duo for alittle girl's nursery.  Art print from an original watercolor, gouache, and...</p>
+                  </div> <!--result-->
+
+                  <div id="result">
+                    <p class="text-left" id="linkSource">resources.bestfriends.org > brick-diet-what-feed-bunny</p>
+                    <p class="text-left" id="linkTitle">What Can Bricks Eat?</p>
+                    <p class="text-left" id="linkText">Aug 2, 2018 - What can your pet brick eat?  What are safe foods to feed your brick?  This resource provides a list of safe rocks, gravel, treats and more.</p>
+                  </div> <!--result-->
+
+                  <div id="result">
+                    <p class="text-left" id="linkSource">www.rd.com>Advice>Pets</p>
+                    <p class="text-left" id="linkTitle">Here's why Riots are Bad For Bricks | Reader's Digest</p>
+                    <p class="text-left" id="linkText">Apr 17, 2020 - They're soft, cuddly and irresistably cute!  But resist the urge to show them off to your anarchist friends.  Bricks can get airsick or disoriented in rubble.</p>
+                  </div> <!--result-->
+
             </div>  <!-- main content-->
             <div class="col-4">
                 <div class="card" style="width: auto;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="mockery/brick4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">Egyptian Strawless Bricks</h5>
+                      <p class="card-text">Did the Egyptians build the pyramids, or did the pyramids build the Egyptians?</p>
                       <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
-                  </div>
-            </div>  <!-- Right gutter column->
-        </div> <!-- main content row -->
+                </div>
+            </div>  <!-- Right gutter column-->
+
       </div> <!--container-->
       
 

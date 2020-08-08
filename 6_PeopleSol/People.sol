@@ -1,5 +1,6 @@
 pragma solidity 0.7.0;
 import './Accountable.sol';
+// SPDX-License-Identifier: UNLICENSED
 
 contract People is Accountable{
 

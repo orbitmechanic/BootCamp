@@ -1,13 +1,15 @@
-import './Mortal.sol';
 pragma solidity 0.7.0;
+import './Mortal.sol';
+// SPDX-License-Identifier: UNLICENSED
+
 
 contract Accountable is Mortal {
     
     uint256 internal balance_;
     
     event receipt(
-        address payable sender, 
-        address payable reciever,
+        address sender, 
+        address reciever,
         uint256 amount);
     
     modifier costs(uint256 cost){
@@ -23,7 +25,7 @@ contract Accountable is Mortal {
         return balance_;
     }
     
-    function credit(address payable from, uint256 ammount) internal {
+    function credit(address from, uint256 ammount) internal {
         balance_ += ammount;
         emit receipt(from, address(this), ammount);
     }

@@ -1,4 +1,5 @@
 pragma solidity 0.7.0;
+// SPDX-License-Identifier: UNLICENSED
 
 contract Ownable {
     
@@ -29,6 +30,5 @@ contract Ownable {
         assert(owner == newOwner); // revert if failed to assign.
         emit OwnershipTransferred(true); // Otherwise signal success.
     }
-    
     
 }

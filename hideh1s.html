@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+      
+      <script>
+          
+          // Are you kidding me with this?
+          
+          function range(start, end, step = 1){
+              // expand a range
+              // presumes integer inputs.
+              let pile = [];  // typecast for members.
+              if (start > end){ 
+                  end = [start, start = end][0];
+              } 
+              do{ pile.push(start);
+              } while ((start+=Math.abs(step)) <=end); 
+              if (step < 0) reverseArrayInPlace(pile);
+              return pile;
+          } // !range()
+          
+          function sum(pile){
+              // return the sum of an array.
+              // presumes input is an array of numbers.
+              let bucket = 0;
+              for(let i= 0; i< pile.length; i++)
+                  bucket += pile[i];
+              return bucket;
+          } // !sum()
+          
+          function reverseArray(pile){
+              // return the cloned reverse of an array
+              let bunch = [];
+              for(let i = 0; i < pile.length;)
+                  bunch[i] = pile[pile.length - (++i)];
+              return bunch;
+          } // !reverseArray()
+    
+          function reverseArrayInPlace(pile){
+              // Reverse an array w/o cloning.
+              let head = 0, tail = pile.length - 1;
+              do{ pile[tail] = [pile[head], pile[head] = pile[tail]][0];
+              } while (++head < --tail);
+              return pile;
+          } // !reverseArrayInPlace()
+          
+      </script>
+
+  </body>
+</html>

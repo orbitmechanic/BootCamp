@@ -1,7 +1,8 @@
 pragma solidity 0.7.0;
-import './Accountable.sol';
+import './Mortal.sol';
+// SPDX-License-Identifier: UNLICENSED
 
-contract People is Accountable{
+contract People is Mortal {
 
     struct Person {
       uint id;
@@ -17,7 +18,7 @@ contract People is Accountable{
     mapping (address => Person) private people;
     address[] private creators;
 
-    function createPerson(string memory name, uint age, uint height) public payable costs(1 ether){
+    function createPerson(string memory name, uint age, uint height) public payable mortal costs(1 ether){
         require(age < 150, "Age needs to be below 150");
         
         credit(msg.sender, msg.value);
@@ -70,7 +71,7 @@ contract People is Accountable{
         return (people[creator].name, people[creator].age, people[creator].height, people[creator].senior);
     }
     
-    function deletePerson(address creator) public onlyOwner {
+    function deletePerson(address creator) public mortal onlyOwner {
       string memory name = people[creator].name;
       bool senior = people[creator].senior;
 

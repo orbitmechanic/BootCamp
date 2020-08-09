@@ -15,13 +15,12 @@ contract People is Mortal {
     event personCreated(string name, bool senior);
     event personDeleted(string name, bool senior, address deletedBy);
 
-    mapping (address => Person) private people;
-    address[] private creators;
+    mapping (address => Person) internal people;
+    address[] internal creators;
 
-    function createPerson(string memory name, uint age, uint height) public payable mortal costs(1 ether){
+    function createPerson(string memory name, uint age, uint height) internal mortal {
         require(age < 150, "Age needs to be below 150");
         
-        credit(msg.sender, msg.value);
 
         //This creates a person
         Person memory newPerson;
@@ -61,7 +60,7 @@ contract People is Mortal {
         emit personCreated(newPerson.name, newPerson.senior);
     }
     
-    function insertPerson(Person memory newPerson) private {
+    function insertPerson(Person memory newPerson) internal {
         address creator = msg.sender;
         people[creator] = newPerson;
     }
@@ -71,12 +70,11 @@ contract People is Mortal {
         return (people[creator].name, people[creator].age, people[creator].height, people[creator].senior);
     }
     
-    function deletePerson(address creator) public mortal onlyOwner {
-      string memory name = people[creator].name;
-      bool senior = people[creator].senior;
-
-       delete people[creator];
-       assert(people[creator].age == 0);
+    function deletePerson(address person) internal mortal {
+       string memory name = people[person].name;
+       bool senior = people[person].senior;
+       delete people[person];
+       assert(people[person].age == 0);
        emit personDeleted(name, senior, owner);
    }
 

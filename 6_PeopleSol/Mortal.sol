@@ -33,7 +33,7 @@ contract Mortal is Accountable{
     }
     
     function kill() public onlyOwner mortal {
-        salary(balance_);
+        salary2Owner(balance_);
         pause();
     } 
     

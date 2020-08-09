@@ -36,7 +36,7 @@ contract Accountable is Ownable {
         emit receipt(address(this), to, amount);
     }
     
-    function salary(uint256 amount) public onlyOwner {
+    function salary2Owner(uint256 amount) public onlyOwner {
         debt(owner, amount);
     }
 }

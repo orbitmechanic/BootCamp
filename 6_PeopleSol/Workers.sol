@@ -16,7 +16,7 @@ contract Workers is People {
         // Persons self-register to work.
         require(age < 75,'Cannot hire above age 75.');
         credit(msg.sender, msg.value); // Enrollment fee.
-        createPerson(name, age, height);
+        createPerson(name, age, height, msg.sender);
         }
         
     function hire(

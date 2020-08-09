@@ -18,7 +18,7 @@ contract People is Mortal {
     mapping (address => Person) internal people;
     address[] internal creators;
 
-    function createPerson(string memory name, uint age, uint height) internal mortal {
+    function createPerson(string memory name, uint age, uint height, address sender) internal mortal {
         require(age < 150, "Age needs to be below 150");
         
 
@@ -36,15 +36,15 @@ contract People is Mortal {
         }
 
         insertPerson(newPerson);
-        creators.push(msg.sender);
+        creators.push(sender);
 
         assert(
             keccak256(
                 abi.encodePacked(
-                    people[msg.sender].name,
-                    people[msg.sender].age,
-                    people[msg.sender].height,
-                    people[msg.sender].senior
+                    people[sender].name,
+                    people[sender].age,
+                    people[sender].height,
+                    people[sender].senior
                 )
             )
             ==

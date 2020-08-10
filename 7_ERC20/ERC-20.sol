@@ -40,7 +40,6 @@ contract ERC20 is Ownable {
     }
 
     function mint(address account, uint256 amount) public onlyOwner {
-        require(amount > 0,'Cannot un-mint tokens.');
         // tokenomics: Owner go brrrr
         _totalSupply += amount;
         _balances[account] += amount; 

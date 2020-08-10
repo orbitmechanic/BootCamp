@@ -1,6 +1,8 @@
-pragma solidity 0.5.12;
+pragma solidity 0.7.0;
+import './Ownable.sol';
+// SPDX-License-Identifier: UNLICENSED
 
-contract ERC20 {
+contract ERC20 is Ownable {
 
     mapping (address => uint256) private _balances;
 
@@ -37,14 +39,17 @@ contract ERC20 {
         return _balances[account];
     }
 
-    function mint(address account, uint256 amount) public {
+    function mint(address account, uint256 amount) public onlyOwner {
         require(amount > 0,'Cannot un-mint tokens.');
-        _balances[account] += amount; // tokenomics: everything's free.
+        // tokenomics: Owner go brrrr
+        _totalSupply += amount;
+        _balances[account] += amount; 
     }
 
     function transfer(address recipient, uint256 amount) public returns (bool) {
         require(_balances[msg.sender] >= amount,'Insufficient funds available.');
         _balances[msg.sender] -= amount;
         _balances[recipient] += amount;
+        return true; // per spec.
     }
 }

@@ -1,5 +1,5 @@
-pragma solidity 0.7.0;
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.8.0;
 
 contract Ownable {
     
@@ -7,12 +7,12 @@ contract Ownable {
     
     event OwnershipTransferred (bool torchPassed);
     
-    modifier onlyOwner(){
+    modifier onlyOwner() {
         require(msg.sender == owner,'Only the contract owner can do that.');
         _;
     }
     
-    constructor (){
+    constructor () public {
         owner = msg.sender;
     }
     

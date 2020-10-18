@@ -1,6 +1,6 @@
-pragma solidity 0.7.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.8.0;
 import './Ownable.sol';
-// SPDX-License-Identifier: UNLICENSED
 
 contract ERC20 is Ownable {
 
@@ -12,12 +12,11 @@ contract ERC20 is Ownable {
     string private _symbol;
     uint8 private _decimals;
 
-        constructor (string memory name, string memory symbol) public {
+    constructor (string memory name, string memory symbol) {
         _name = name;
         _symbol = symbol;
         _decimals = 18;
     }
-
 
     function name() public view returns (string memory) {
         return _name;

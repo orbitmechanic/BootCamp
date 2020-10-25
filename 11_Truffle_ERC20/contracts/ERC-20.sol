@@ -8,15 +8,9 @@ contract ERC20 is Ownable {
 
     uint256 private _totalSupply;
 
-    string private _name;
-    string private _symbol;
-    uint8 private _decimals;
-
-    constructor (string memory name, string memory symbol) {
-        _name = name;
-        _symbol = symbol;
-        _decimals = 18;
-    }
+    string private _name = 'CryptAnimal';
+    string private _symbol = 'CA';
+    uint8 private _decimals = 18;
 
     function name() public view returns (string memory) {
         return _name;
